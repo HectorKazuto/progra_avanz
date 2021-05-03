@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deadpool</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #3B0001">
+	<font face="Calibri"><h1 style="" align="center">USTED A ELEGIDO DEADPOOL</h1>
+	<div align="center">
+		<img src="static/img/deadpool.jpg" width="400" height="500">
+		<font size="6"><p> COSTO: $300</p>
+		<font size="3"><p>Ingrese el monto a pagar</p></font>
+		<input id="pago" type="number" name=""> <br>
+		<button id="Boton_pagar">Pagar</button>
+		<br><br><br>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#Boton_pagar").click(function(){
+				var pago = Number($("#pago").val());
+
+				if(pago >= 230) { // si puedo tomar
+					alert("Felicidades! Tu compra ha sido exitosa");
+				}
+				else { // no puedo tomar
+					alert("Lo siento! Falta dinero");
+				}
+				
+				location.reload();
+			});	
+		});
+	</script>
+</body>
+</html>
